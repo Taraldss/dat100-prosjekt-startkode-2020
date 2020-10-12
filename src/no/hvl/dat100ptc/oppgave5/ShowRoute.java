@@ -92,7 +92,7 @@ public class ShowRoute extends EasyGraphics {
 			
 			fillCircle(xCoordinate, yCoordinate, 2);
 			
-			if(xLine>0) {
+			if(xLine > 0 && yLine > 0) {
 				drawLine(xLine, yLine, xCoordinate, yCoordinate);
 			}
 			
