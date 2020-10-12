@@ -79,8 +79,8 @@ public class ShowRoute extends EasyGraphics {
 		double minlon = GPSUtils.findMin(GPSUtils.getLongitudes(gpspoints));
 		double minlad = GPSUtils.findMin(GPSUtils.getLatitudes(gpspoints));
 		
-		int x = 0;
-		int y = 0;
+		int xLine = 0;
+		int yLine = 0;
 		
 		for(int i = 0; i < gpspoints.length; i++) {
 			
@@ -92,16 +92,18 @@ public class ShowRoute extends EasyGraphics {
 			
 			fillCircle(xCoordinate, yCoordinate, 2);
 			
-			if(x>0) {
-				drawLine(x, y, xCoordinate, yCoordinate);
+			if(xLine>0) {
+				drawLine(xLine, yLine, xCoordinate, yCoordinate);
 			}
 			
-			
-			x = xCoordinate;
-			y = yCoordinate;
+			xLine = xCoordinate;
+			yLine = yCoordinate;
+
 		}
+		
 		setColor(255,0,0);
-		fillCircle(x, y, 5);
+		fillCircle(xLine, yLine, 5);
+		
 		
 		// TODO - SLUTT
 	}
