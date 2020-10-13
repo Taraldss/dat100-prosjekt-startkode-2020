@@ -11,6 +11,7 @@ public class GPSData {
 	public GPSData(int n) {
 
 		// TODO - START
+		//konstruktør for klassen
 		
 		this.gpspoints = new GPSPoint[n];
 		this.antall = 0;
@@ -23,7 +24,8 @@ public class GPSData {
 	}
 	
 	protected boolean insertGPS(GPSPoint gpspoint) {
-
+		
+		//Setter inn et gpspunkt i en gpspunkt-tabell gitt av objektvariabel antall.
 		boolean inserted = false;
 
 		// TODO - START
@@ -41,15 +43,12 @@ public class GPSData {
 	}
 
 	public boolean insert(String time, String latitude, String longitude, String elevation) {
-
+		//konverterer data og kaller insertGPS metoden.
 		GPSPoint gpspoint;
 		
-		int timeInt = GPSDataConverter.toSeconds(time);
-		double latitudeDub = Double.parseDouble(latitude);
-		double longitudeDub = Double.parseDouble(longitude);
-		double elevationDub = Double.parseDouble(elevation);
+		
 		// TODO - START
-		gpspoint = new GPSPoint(timeInt, latitudeDub, longitudeDub, elevationDub);
+		gpspoint = GPSDataConverter.convert(time, latitude, longitude, elevation);
 		
 		
 		return insertGPS(gpspoint);
@@ -58,7 +57,7 @@ public class GPSData {
 	}
 
 	public void print() {
-
+		//utskrift av gpsdata.
 		System.out.println("====== Konvertert GPS Data - START ======");
 
 		// TODO - START
