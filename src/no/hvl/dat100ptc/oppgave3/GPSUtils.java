@@ -24,7 +24,8 @@ public class GPSUtils {
 	}
 
 	public static double findMin(double[] da) {
-
+		
+		//finner minste verdi i en tabell.
 		double min;
 
 		// TODO - START
@@ -44,7 +45,7 @@ public class GPSUtils {
 	}
 
 	public static double[] getLatitudes(GPSPoint[] gpspoints) {
-
+		//legger inn alle breddegradene i en tabell.
 		// TODO - START
 		double[] latitudes = new double[gpspoints.length];
 		for(int i = 0; i < gpspoints.length; i++ ) {
@@ -57,7 +58,7 @@ public class GPSUtils {
 	}
 
 	public static double[] getLongitudes(GPSPoint[] gpspoints) {
-
+		//legger in alle høgdegradene i en tabell.
 		// TODO - START
 
 		double[] longitudes = new double[gpspoints.length];
@@ -74,7 +75,7 @@ public class GPSUtils {
 	private static int R = 6371000; // jordens radius
 
 	public static double distance(GPSPoint gpspoint1, GPSPoint gpspoint2) {
-
+		//regner ut avstanden mellom 2 gps punkter. 
 		double d;
 		double latitude1, longitude1, latitude2, longitude2;
 
@@ -103,7 +104,7 @@ public class GPSUtils {
 	}
 
 	public static double speed(GPSPoint gpspoint1, GPSPoint gpspoint2) {
-
+		//regner ut gjennomsnittshastigheten mellom 2 punkt
 		int secs;
 		double speed; //km/h
 		
@@ -122,7 +123,7 @@ public class GPSUtils {
 	}
 
 	public static String formatTime(int secs) {
-
+		//formaterer tid HH:MM:SS
 		String timestr;
 		String TIMESEP = ":";
 		
@@ -147,7 +148,7 @@ public class GPSUtils {
 
 	}
 	private static int TEXTWIDTH = 10;
-
+	//Formaterer double til .00;
 	public static String formatDouble(double d) {
 
 		String str = "";

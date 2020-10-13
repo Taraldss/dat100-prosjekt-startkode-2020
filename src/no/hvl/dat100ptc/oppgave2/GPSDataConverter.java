@@ -31,7 +31,7 @@ public class GPSDataConverter {
 	}
 
 	public static GPSPoint convert(String timeStr, String latitudeStr, String longitudeStr, String elevationStr) {
-
+		//konverterer data fra string til int/double
 		GPSPoint gpspoint;
 		
 		int secs = toSeconds(timeStr);
