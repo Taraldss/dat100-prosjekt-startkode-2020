@@ -62,7 +62,7 @@ public class ShowSpeed extends EasyGraphics {
             yAverage += y;
             
         }
-		for(int j = 0; j < gpspoints.length; j++) {
+		for(int j = 0; j < N; j++) {
 			setColor(255, 0, 255);
 			drawLine(x + j * 2, ybase - yAverage/gpspoints.length, x + j * 2, ybase - yAverage/gpspoints.length);
 		}

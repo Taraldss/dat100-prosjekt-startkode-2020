@@ -14,6 +14,7 @@ public class GPSDataConverter {
 
 	public static int toSeconds(String timestr) {
 		
+		//Regner om tidsdata representert som streng og returnerer antall sekunder som heltall.
 		int secs;
 		int hr, min, sec;
 		
